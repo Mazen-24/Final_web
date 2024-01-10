@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Bootstrap CSS if you haven't already -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <!-- ... (previous HTML code) ... -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Your App Name</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="login_history.html">Login History</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-danger ml-2" onclick="signOut()">Sign Out</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<div class="container">
+    <h1 style="color: orange; text-align: center;">Dashboard</h1>
+
+    <!-- Centered Image Section -->
+    <div style="text-align: center;">
+        <img src="img.jpg" alt="Centered Image" style="max-width: 300px;">
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <!-- ... (previous HTML code) ... -->
+
+<!-- ... (remaining HTML code) ... -->
+
+
+<div class="container">
+    <h1 style="color: orange; text-align: center;">Dashboard</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h3 style="color: blue;">Add Department</h3>
+            <form id="addDepartmentForm">
+                <div class="form-group">
+                    <label for="departmentName">Department Name:</label>
+                    <input type="text" class="form-control" id="departmentName" required>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="addDepartment()">Add Department</button>
+            </form>
+        </div>
+
+        <div class="col-md-6">
+            <h3 style="color: blue;">Add User</h3>
+            <form id="addUserForm">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" class="form-control" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="departmentId">Department ID:</label>
+                    <input type="text" class="form-control" id="departmentId" required>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="addUser()">Add User</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h3 style="color: blue;">Current Users</h3>
+            <table class="table">
+                <!-- Table header -->
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Department</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <!-- Table body will be populated dynamically using jQuery -->
+                <tbody id="usersTableBody"></tbody>
+            </table>
+        </div>
+
+        <div class="col-md-6">
+            <h3 style="color: blue;">All Departments</h3>
+            <table class="table">
+                <!-- Table header -->
+                <thead>
+                    <tr>
+                        <th>Department ID</th>
+                        <th>Department Name</th>
+                    </tr>
+                </thead>
+                <!-- Table body will be populated dynamically using jQuery -->
+                <tbody id="departmentsTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="js/script.js"></script>
+<!-- Include Bootstrap JS if you haven't already -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

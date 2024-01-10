@@ -1,0 +1,23 @@
+function login() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    $.ajax({
+        type: 'POST',
+        url: '/api/login',
+        data: { username: username, password: password },
+        success: function(response) {
+            if (response === true) {
+                // Redirect to the Dashboard
+                window.location.href = '/dashboard';
+            } else {
+                // Display an alert for wrong credentials
+                alert('Wrong Credentials');
+            }
+        },
+        error: function() {
+            // Handle error if needed
+            alert('Error during login');
+        }
+    });
+}
